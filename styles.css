@@ -1,3 +1,4 @@
+body {
 .desktop_7 * {
   font-family: Nunito, sans-serif;
 }
@@ -574,4 +575,5 @@
   .desktop_7 .overlay-inner hdImgs {
     width: 90%;
   }
+}
 }
