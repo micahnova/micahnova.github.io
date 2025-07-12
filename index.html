@@ -1,177 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="styles.css">
-  <script src="path/to/your/script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Homepage with Image Carousel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 10px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 15px;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .image-container {
+      margin: 50px auto;
+      width: 80%;
+      max-width: 400px;
+      height: 200px;
+      background-color: #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    hr {
+      margin: 50px 0 10px;
+      border: none;
+      border-top: 2px solid #333;
+    }
+
+    footer {
+      font-size: 14px;
+      color: #777;
+      padding-bottom: 20px;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        font-size: 16px;
+        margin: 8px 10px;
+      }
+
+      .image-container {
+        height: 150px;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="desktop_7" unique-script-id="w-w-dm-id">
-  <div class="responsive-container-block bigContainer">
-    <div class="responsive-container-block Container">
-      <p class="text-blk headingText">
-        Micah Liesenfeld
-      </p>
-      <div class="responsive-container-block optionsContainer">
-        <p class="text-blk list all active" data-filter="all">
-          About
-        </p>
-        <p class="text-blk list" data-filter="one">
-          Shop
-        </p>
-        <p class="text-blk list" data-filter="two">
-          Patreon
-        </p>
-        <p class="text-blk list" data-filter="three">
-          Events
-        </p>
-      </div>
-      <div class="responsive-container-block imageContainer">
-        <div class="project">
-          <div class="overlay">
-            <div class="overlay-inner">
-              <button class="close">
-                Close X
-              </button>
-              <div class="hdImgs">
-                <img alt="" class="againImg" src="/assets/ATWalker1CoverSquare.jpg">
-              </div>
-            </div>
-          </div>
-          <img class="squareImg one" src="/assets/ATWalker1CoverSquare.jpg">
-          <div class="btn-box">
-            <button class="btn">
-              View
-            </button>
-          </div>
-        </div>
-        <div class="project">
-          <img class="squareImg two" src="/assets/spacecarbluebook.jpg">
-          <div class="overlay">
-            <div class="overlay-inner">
-              <button class="close">
-                Close X
-              </button>
-              <div class="hdImgs">
-                <img class="squareImg two" src="/assets/spacecarbluebook.jpg">
-              </div>
-            </div>
-          </div>
-          <div class="btn-box">
-            <button class="btn">
-              View
-            </button>
-          </div>
-        </div>
-        <div class="project">
-          <img class="squareImg three" src="/assets/mustard.jpg">
-          <div class="overlay">
-            <div class="overlay-inner">
-              <button class="close">
-                Close X
-              </button>
-              <div class="hdImgs">
-                <img alt="" class="againImg" src="/assets/mustard.jpg">
-              </div>
-            </div>
-          </div>
-          <div class="btn-box">
-            <button class="btn">
-              View
-            </button>
-          </div>
-        </div>
-        <div class="project">
-          <img class="squareImg four" src="/assets/skull.jpg">
-          <div class="overlay">
-            <div class="overlay-inner">
-              <button class="close">
-                Close X
-              </button>
-              <div class="hdImgs">
-                <img alt="" class="againImg" src="/assets/skull.jpg">
-              </div>
-            </div>
-          </div>
-          <div class="btn-box">
-            <button class="btn">
-              View
-            </button>
-          </div>
-        </div>
-        <div class="project">
-          <img class="squareImg five" src="/assets/ninja.jpg">
-          <div class="hdImg">
-            <img alt="" class="againImg" src="/assets/ninja.jpg"">
-          </div>
-          <div class="btn-box">
-            <button class="btn">
-              View
-            </button>
-          </div>
-        </div>
-        <div class="project">
-          <img class="squareImg one" src="/assets/snow.jpg">
-          <div class="overlay">
-            <div class="overlay-inner">
-              <button class="close">
-                Close X
-              </button>
-              <div class="hdImgs">
-                <img alt="" class="againImg" src="/assets/snow.jpg">
-              </div>
-            </div>
-          </div>
-          <div class="btn-box">
-            <button class="btn">
-              View
-            </button>
-          </div>
-        </div>
-        <div class="project">
-          <img class="squareImg two" src="/assets/nella.jpg">
-          <div class="overlay">
-            <div class="overlay-inner">
-              <button class="close">
-                Close X
-              </button>
-              <div class="hdImgs">
-                <img alt="" class="againImg" src="/assets/nella.jpg">
-              </div>
-            </div>
-          </div>
-          <div class="btn-box">
-            <button class="btn">
-              View
-            </button>
-          </div>
-        </div>
-        <div class="project">
-          <img class="squareImg three" src="/assets/shows.jpg">
-          <div class="overlay">
-            <div class="overlay-inner">
-              <button class="close">
-                Close X
-              </button>
-              <div class="hdImgs">
-                <img alt="" class="againImg" src="/assets/shows.jpg">
-              </div>
-            </div>
-          </div>
-          <div class="btn-box">
-            <button class="btn">
-              View
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+
+  <nav>
+    <a href="blog.html">Blog</a>
+    <a href="store.html">Store</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="image-container" onclick="nextImage()">
+    <img id="carouselImage" src="https://via.placeholder.com/400x200?text=Image+1" alt="Slideshow Image">
   </div>
-</div>
-<p>
-  <a href="https://houseoflief.com/cac-webring/prev.html?id=12">previous</a> 
-  <a href="https://houseoflief.com/cac-webring/rand.html?id=12">random</a>
-  <a href="https://houseoflief.com/cac-webring/list.html?id=12">list</a>
-  <a href="https://houseoflief.com/cac-webring/next.html?id=12">next</a>
-  </p>
-  </body>
+
+  <hr>
+
+  <footer>
+    &copy; 2025 Your Website Name. All rights reserved.
+  </footer>
+
+  <script>
+    const images = [
+      "https://via.placeholder.com/400x200?text=Image+1",
+      "https://via.placeholder.com/400x200?text=Image+2",
+      "https://via.placeholder.com/400x200?text=Image+3",
+      "https://via.placeholder.com/400x200?text=Image+4"
+    ];
+
+    let currentIndex = 0;
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      document.getElementById("carouselImage").src = images[currentIndex];
+    }
+  </script>
+
+</body>
 </html>
