@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artist Bio</title>
+  <style>
+    :root {
+      --accent: #1f2937; /* Dark gray for headings */
+      --text: #111827;   /* Body text color */
+      --bg: #ffffff;     /* Background */
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    .container {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      color: var(--accent);
+      letter-spacing: 0.5px;
+    }
+
+    header .tagline {
+      margin-top: 6px;
+      color: #4b5563;
+      font-size: 1rem;
+    }
+
+    /* Image + wrap */
+    .bio {
+      font-size: 1.05rem;
+    }
+
+    .portrait {
+      float: left;               /* Make text wrap around the image */
+      max-width: 260px;          /* Limit image width on large screens */
+      width: 42%;                /* Responsive size */
+      height: auto;
+      margin: 0 20px 12px 0;     /* Space around the image */
+      border-radius: 8px;        /* Rounded corners (optional) */
+      object-fit: cover;
+    }
+
+    /* Improve layout on small screens */
+    @media (max-width: 640px) {
+      .portrait {
+        float: none;             /* Stack image above text on phones */
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 16px 0;
+      }
+    }
+
+    /* Optional subtle footer */
+    footer {
+      margin-top: 32px;
+      padding-top: 16px;
+      border-top: 1px solid #e5e7eb;
+      color: #6b7280;
+      font-size: 0.95rem;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 10px 14px;
+      background: #111827;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    a.button:hover {
+      background: #374151;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Your Name</h1>
+      <div class="tagline">Painter · Mixed Media · Contemporary</div>
+    </header>
+
+    <section class="bio">
+      <img
+        src="your-photo.jpg"
+        alt="Portrait of Your Name"
+        class="portrait"
+      />
+
+      <p>
+        Your Name is a contemporary artist whose work explores memory, texture,
+        and the quiet drama of everyday spaces. Drawing from architectural
+        forms and natural light, they build layered compositions that invite
+        viewers to slow down and notice the subtle narratives hidden in familiar
+        environments.
+      </p>
+
+      <p>
+        Raised in St. Louis and trained in mixed media, Your Name blends
+        collage, pigment, and found materials into tactile surfaces. Recent
+        exhibitions include <em>Held Breath</em> (2024), <em>Substrate</em> (2025),
+        and commissions for community spaces across the Midwest. Their practice
+        centers sustainability, reusing materials to extend their life and
+        meaning.
+      </p>
+
+      <p>
+        When not in the studio, Your Name teaches workshops and collaborates
+        with local makers. Upcoming projects include a site-specific installation
+        for the spring season and a limited print series.
+      </p>
+    </section>
+
+    <footer>
+      For inquiries or commissions:
+      <br />
+      <a class="button" href="mailto:you@example.com?subject=Artist%20Inquiry&body=Hi%20Your%20Name,%0D%0A%0D%0AI'm%20interested%20in%20your%20work.">
+        Email Me
+      </a>
+      &nbsp;·&nbsp;
+      <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">Instagram</a>
+      &nbsp;·&nbsp;
+      <a href="https://yourportfolio.com" target="_blank" rel="noopener">Portfolio</a>
+    </footer>
+  </main>
+</body>
+</html>
