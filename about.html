@@ -19,7 +19,24 @@
       color: var(--text);
       background: var(--bg);
     }
+    nav {
+      background-color: #333;
+      padding: 10px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 15px;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
     .container {
       max-width: 840px;
       margin: 0 auto;
@@ -95,6 +112,12 @@
   </style>
 </head>
 <body>
+  <nav>
+    <a href="https://www.patreon.com/cw/u34116140">Blog</a>
+    <a href="https://www.etsy.com/shop/micahnova">Store</a>
+    <a href="https://micahnova.github.io/about.html">About</a>
+    <a href="mailto:micahnova@gmail.com">Contact</a>
+  </nav>
   <main class="container">
     <header>
       <h1>Micah Liesenfeld</h1>
