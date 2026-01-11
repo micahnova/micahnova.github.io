@@ -34,6 +34,7 @@ function loadMoreItems() {
     div.innerHTML = `
       <img src="${item.img}" alt="${item.title}" />
       <p>${item.title}</p>
+      <p class="description">${item.description || ''}</p>
     `;
     gallery.appendChild(div);
   });
