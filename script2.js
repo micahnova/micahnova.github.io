@@ -6,7 +6,7 @@ let artCollection = [
   { title: 'A-T Walker 3', img: 'assets/cat2025ATW3.jpg' },
   { title: 'A-T Walker 2', img: 'assets/cat2024ATW2.jpg' },
   { title: 'A-T Walker 1', img: 'assets/cat2023ATW1.jpg' },
-  { title: 'Space Car Blue Book / Mochidays', img: 'assets/cat2025SCBB2.jpg' },
+  { title: 'Space Car Blue Book 2', img: 'assets/cat2025SCBB2.jpg',  description: 'and <b>Mochidays</b> by Mochiwei' },
   // Add more items here...
 ];
 
