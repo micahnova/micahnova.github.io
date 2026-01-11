@@ -30,7 +30,6 @@ artCollection.sort((a, b) => a.title.localeCompare(b.title));
 
 let itemsLoaded = 0;
 const itemsPerLoad = 12;
-let currentIndex = 0; // Track current image in lightbox
 
 // Load initial items
 loadMoreItems();
@@ -44,14 +43,15 @@ window.addEventListener('scroll', () => {
 
 function loadMoreItems() {
   const nextItems = artCollection.slice(itemsLoaded, itemsLoaded + itemsPerLoad);
-  nextItems.forEach((item, index) => {
+  nextItems.forEach(item => {
     const div = document.createElement('div');
     div.className = 'art-item';
     div.innerHTML = `
       <img src="${item.img}" alt="${item.title}" />
       <p class="title">${item.title}</p>
     `;
-    div.addEventListener('click', () => openLightbox(itemsLoaded + index));
+    // Make each item clickable to open lightbox
+    div.addEventListener('click', () => openLightbox(item));
     gallery.appendChild(div);
   });
   itemsLoaded += itemsPerLoad;
@@ -63,16 +63,9 @@ const lightboxImg = document.getElementById('lightbox-img');
 const lightboxInfo = document.getElementById('lightbox-info');
 const closeBtn = document.querySelector('.close');
 
-// Open lightbox
-function openLightbox(index) {
-  currentIndex = index;
-  showLightboxItem(currentIndex);
+// Open lightbox with image and info
+function openLightbox(item) {
   lightbox.style.display = 'flex';
-}
-
-// Show item in lightbox
-function showLightboxItem(index) {
-  const item = artCollection[index];
   lightboxImg.src = item.img;
   lightboxImg.alt = item.title;
   lightboxInfo.innerHTML = `
@@ -86,29 +79,7 @@ closeBtn.addEventListener('click', () => {
   lightbox.style.display = 'none';
 });
 
-// Close when clicking outside
+// Close lightbox when clicking outside the image
 window.addEventListener('click', (e) => {
   if (e.target === lightbox) lightbox.style.display = 'none';
-});
-
-// Swipe support
-let startX = 0;
-lightbox.addEventListener('touchstart', (e) => {
-  startX = e.touches[0].clientX;
-});
-
-lightbox.addEventListener('touchend', (e) => {
-  const endX = e.changedTouches[0].clientX;
-  const diffX = startX - endX;
-
-  if (Math.abs(diffX) > 50) {
-    if (diffX > 0) {
-      // Swipe left → next image
-      currentIndex = (currentIndex + 1) % artCollection.length;
-    } else {
-      // Swipe right → previous image
-      currentIndex = (currentIndex - 1 + artCollection.length) % artCollection.length;
-    }
-    showLightboxItem(currentIndex);
-  }
 });
