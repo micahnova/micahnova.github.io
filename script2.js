@@ -11,17 +11,17 @@ let artCollection = [
   {
     title: 'A-T Walker 2',
     img: 'assets/cat2024ATW2.jpg',
-    description: '2024<br> full color <br> 24 pages'
+    description: '2024<br> full color <br> <a href="https://www.etsy.com/listing/1811161037/a-t-walker-2?sr_prefetch=1&pf_from=shop_home&ref=shop_home_active_5&frs=1&logging_key=e6cb65250d4cf0b5ddf2e748f66facbcd4e7f898%3A1811161037" target="_blank" rel="noopener noreferrer">buy</a>'
   },
   {
     title: 'A-T Walker 1',
     img: 'assets/cat2023ATW1.jpg',
-    description: '2023<br> full color <br> 24 pages'
+    description: '2023<br> full color <br> <a href="https://www.etsy.com/listing/1591054760/a-t-walker-1?sr_prefetch=1&pf_from=shop_home&ref=shop_home_active_6&frs=1&logging_key=623740c23e380b62bd445301c4a596b799ad20f6%3A1591054760" target="_blank" rel="noopener noreferrer">buy</a>'
   },
   {
     title: 'Space Car Blue Book 2',
     img: 'assets/cat2025SCBB2.jpg',
-    description: '2025<br> split zine with Mochidays by Mochiwei<br> full color<br> 24 pages'
+    description: '2025<br> split zine with Mochidays by Mochiwei<br> full color<br> Click to <a href="https://www.etsy.com/listing/4401766662/space-car-blue-book-mochidays?sr_prefetch=1&pf_from=shop_home&ref=shop_home_active_2&frs=1&logging_key=adb1129a4bcd23127b2d9a08691dbe17a086e6b3%3A4401766662 target="_blank" rel="noopener noreferrer">buy</a>'
   }
 ];
 
