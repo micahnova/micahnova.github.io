@@ -32,10 +32,7 @@ function loadMoreItems() {
     const div = document.createElement('div');
     div.className = 'art-item';
     div.innerHTML = `
-      <img src="assets/cat2025ATW3.jpg" alt="${item.title}">
-      <img src="assets/cat2025ATW2.jpg" alt="${item.title}">
-      <img src="assets/cat2025ATW1.jpg" alt="${item.title}">
-      <img src="assets/cat2025SCBB2.jpg" alt="${item.title}">
+      <img src="${item.img}" alt="${item.title}" />
       <p>${item.title}</p>
     `;
     gallery.appendChild(div);
