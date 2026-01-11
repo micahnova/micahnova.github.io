@@ -50,7 +50,6 @@ function loadMoreItems() {
       <img src="${item.img}" alt="${item.title}" />
       <p class="title">${item.title}</p>
     `;
-    // Make each item clickable to open lightbox
     div.addEventListener('click', () => openLightbox(item));
     gallery.appendChild(div);
   });
