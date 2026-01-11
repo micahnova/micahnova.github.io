@@ -49,6 +49,7 @@ function loadMoreItems() {
     div.innerHTML = `
       <img src="${item.img}" alt="${item.title}" />
       <p class="title">${item.title}</p>
+      <p class="description">${item.description || ''}</p>
     `;
     // Make each item clickable to open lightbox
     div.addEventListener('click', () => openLightbox(item));
@@ -70,7 +71,7 @@ function openLightbox(item) {
   lightboxImg.alt = item.title;
   lightboxInfo.innerHTML = `
     <h2>${item.title}</h2>
-    <p>${item.description}</p>
+    <p>${item.description.replace(/<br>/g, '<br>')}</p>
   `;
 }
 
