@@ -34,6 +34,7 @@ function loadMoreItems() {
     div.innerHTML = `
       <img src="assets/cat2025ATW3.jpg" alt="${item.title}">
       <img src="assets/cat2025ATW2.jpg" alt="${item.title}">
+      <img src="assets/cat2025ATW1.jpg" alt="${item.title}">
       <img src="assets/cat2025SCBB2.jpg" alt="${item.title}">
       <p>${item.title}</p>
     `;
