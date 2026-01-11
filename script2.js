@@ -6,7 +6,7 @@ let artCollection = [
   {
     title: 'A-T Walker 3',
     img: 'assets/cat2025ATW3.jpg',
-    description: '2025<br> full color <br> '2025<br> full color <br> 24 pages<br> Click to <a href="https://www.etsy.com/listing/4414766789/a-t-walker-3?ref=shop_home_feat_1&sr_prefetch=1&pf_from=shop_home&frs=1&logging_key=495bdd1665d4daba2074d20e37ce5f5da81435f7%3A4414766789" target="_blank" rel="noopener noreferrer">buy</a>'
+    description: '2025<br> full color <br> '2025<br> full color <br> 24 pages<br> Click to <a href="https://www.etsy.com/listing/4414766789/a-t-walker-3?ref=shop_home_feat_1&sr_prefetch=1&pf_from=shop_home&frs=1&logging_key=495bdd1665d4daba2074d20e37ce5f5da81435f7%3A4414766789" target="_blank" rel="noopener noreferrer">buy</a>''
   },
   {
     title: 'A-T Walker 2',
