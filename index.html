@@ -4,129 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Responsive Homepage with Image Carousel</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-
-    nav {
-      background-color: #333;
-      padding: 10px 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 10px 15px;
-      font-size: 18px;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .image-container {
-      margin: 50px auto;
-      width: 80%;
-      max-width: 936px;
-      height: 738px;
-      background-color: #ccc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      cursor: pointer;
-    }
-
-    .image-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    hr {
-      margin: 50px 0 10px;
-      border: none;
-      border-top: 2px solid #333;
-    }
-
-    footer {
-      font-size: 14px;
-      color: #777;
-      padding-bottom: 20px;
-    }
-
-    @media (max-width: 936px) {
-      nav a {
-        font-size: 16px;
-        margin: 8px 10px;
-      }
-
-      .image-container {
-  margin: 5vw auto;
-  width: 100vw; /* 100% of the viewport width */
-  max-width: 936px;
-  height: auto;
-  aspect-ratio: 4 / 3; /* Maintains a consistent aspect ratio */
-  background-color: #ccc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <nav>
-    <a href="https://www.patreon.com/cw/u34116140">Blog</a>
-    <a href="/comixcat.html">Catalogue</a>
-    <a href="/about.html">About</a>
-    <a href="mailto:micahnova@gmail.com">Contact</a>
+  <nav class="navbar" aria-label="Main navigation">
+    <button class="hamburger" aria-label="Open menu" aria-controls="navLinks" aria-expanded="false">
+      &#9776;
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="https://www.patreon.com/cw/u34116140">Blog</a>
+      <a href="/comixcat.html">Catalogue</a>
+      <a href="/about.html">About</a>
+      <a href="mailto:micahnova@gmail.com">Contact</a>
+    </div>
   </nav>
-
-  <div class="image-container" onclick="nextImage()">
-    <img id="carouselImage" src="assets/AT_Walker_01.jpg" alt="Slideshow Image">
+  <div class="image-container" id="carouselContainer">
+    <!-- The carousel image will be injected by script.js -->
   </div>
-
   <hr>
-
   <footer>
-    &copy; 2026 Micah Liesenfeld. All rights reserved.
+    © 2026 Micah Liesenfeld. All rights reserved.
   </footer>
-
-  <script>
-    const images = [
-      "assets/AT_Walker_01.jpg",
-      "assets/Lightningbug_01.jpg",
-      "assets/Nella_03.jpg",
-      "assets/spacecarbluebook01.jpg",
-      "assets/Robot_Babysitter_01.jpg",
-      "assets/grisja01.jpg",
-      "assets/Skull01.jpg"
-    ];
-
-    let currentIndex = 0;
-
-    function nextImage() {
-      currentIndex = (currentIndex + 1) % images.length;
-      document.getElementById("carouselImage").src = images[currentIndex];
-    }
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
